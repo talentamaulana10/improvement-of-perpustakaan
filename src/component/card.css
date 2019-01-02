@@ -1,0 +1,18 @@
+.mecard{
+    text-align: center;
+    background-color: brown;
+    width: 500px;
+    margin-left: 350px;
+    color: white;
+    margin-top: 20px;
+    height: 170px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.mecard button{
+    margin: 30px 10px 0px 0px;
+    width: 100px;
+    background: 0;
+    border-width: 2px;
+    border-color: white;
+}
