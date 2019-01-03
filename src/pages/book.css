@@ -12,13 +12,13 @@ height: 630px;
     font-size: 20px;
     border-radius: 5px;
     text-align: center;
-    color: white;
+    color: white;   
 }
 .mebook h1{
     color: white;
     font-family: "Century Gothic";
     text-align: center;
-
+    font-size: 36px;
 }
 .mebook select{
  width: 200px;
@@ -38,11 +38,48 @@ height: 630px;
     color: white;
     margin: 50px 0px -28px 38px;
 }
-.mebook button{
-    margin: 20px 0px 0px 50px;
+
+.mybutton{
+    margin: 60px 0px 0px 100px;
     width: 100px;
-    background: 0;
-    color: white;
+    background-color: white;
+    height: 36px;
+    border-width: 0px;
+    color: rgb(5, 81, 104);
+    font-weight: 500;
+    font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
 }
+.mybuttont{
+    margin: 60px 0px 0px 20px;
+    width: 100px;
+    background:0;
+    border-width: 2px;
+    border-color: white;
+    height: 36px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.mybuttont:hover{
+    background-color: rgba(255, 255, 255, 0.096);
+}
+.mebook hr{
+    background-color: white;
+    width: 1000px;
+}
+.keluar{
+    background-color: brown;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 26px;
+    color: white;
+    height: 33px;
+    margin-left: 1100px;
+    margin-top: 190px;
+    width: 100px;
+}
+

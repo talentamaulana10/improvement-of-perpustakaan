@@ -1,11 +1,14 @@
 import React,{Component} from 'react'
 import './book.css'
+import {Collapse,Navbar,NavLink,Button,NavbarToggler,NavbarBrand,Nav,NavItem,UncontrollexdDropdown,DropdownToggle,DropdownMenu,DropdownItem}from 'reactstrap';
+
+import {Link} from 'react-router-dom';
 import Axios from 'axios'
 export default class BookCreate extends Component{
     state={
         author:[],
         judul:"",
-        id_author:2,
+        id_author:0,
     }
     getAuthor=()=>{
         Axios.get('https://api-demo.koding.sch.id/api/author/')
@@ -17,19 +20,36 @@ export default class BookCreate extends Component{
             console.log(this.state.author)
           })
           .catch((err)=>{
-              console.log(err);
+              
           });
         };
         postBook=()=>{
             Axios.post('https://api-demo.koding.sch.id/api/book/',{
-            judul:"belajar menyimpan",
-            id_author:1
+            judul:this.state.judul,
+            id_author:this.state.id_author
         })
         .then(()=>{
-            alert("data succes di transfer")
+            alert("transfer data berhasil")
         })
         .catch(()=>{
-            alert("gagal")
+            alert("transfer data gagal, mungkin anda sedang ofline")
+        })
+        
+    }
+    batal=()=>{
+        this.setState({
+            judul:""
+        })
+    }
+    handleChanges=(event)=>{
+        this.setState({
+            judul:event.target.value
+        })
+    }
+    selectHandleChanges=(event)=>{
+        console.log(event.target.value)
+        this.setState({
+            id_author:event.target.value
         })
     }
     componentDidMount(){
@@ -40,17 +60,21 @@ export default class BookCreate extends Component{
         return(
             <div className="mebook">
             <h1>Selamat datang di halaman tambah buku</h1>
-                <input placeholder="Tulis Judul buku"/><br/>
+            <hr/>
+                <input onChange={this.handleChanges} placeholder="Tulis Judul buku" value={this.state.judul}/><br/>
                 <p>pilih nama penulis :</p>
-                <select>
+                <select onChange={this.selectHandleChanges}>
                     {author.map((value, index)=>{
-                        return <option value={index}>{value.name}</option>
+                        return <option value={value.id}>{value.name}</option>
                     })}
 
                 </select><br/>
                 
-                    <button onClick={()=>{this.postBook()}}>Simpan</button>
-                
+                    <button className="mybutton" onClick={()=>{this.postBook()}}>Simpan</button>
+                    <button className="mybuttont" onClick={()=>{this.batal()}} >Batal</button><br/>
+                    
+                    <NavLink tag={Link} to="/"><h3 className="keluar">Home</h3></NavLink>
+                    
             </div>
         )
     }
