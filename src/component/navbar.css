@@ -1,13 +1,9 @@
 .mynav{
-    color: black;
+    margin: 0px 140px 0px 140px;
+    font-weight: 600;
+    font-size: 18px;
 }
-.mynav p{
-    color: rgb(255, 255, 255);
-    background-color: brown;
-    text-align: center;
-    height: 38px;
-    font-size: 23px;
-    border-radius: 10px;
-    width: 400px;
-    margin-left: 400px;
+.mydrop{
+    margin-right: 200px;
+    margin-left: 60px;
 }

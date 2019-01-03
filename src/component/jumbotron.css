@@ -1,0 +1,14 @@
+.mejumbo{
+    text-align: center;
+    background: url("download.png") no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    height: 400px;
+}
+.mejumbo hr{
+    background-color: rgba(255, 255, 255, 0.226);
+    
+}
+.mejumbo button{
+    margin-top: 30px;
+}
