@@ -21,7 +21,7 @@ export default class Drop extends React.Component {
   render() {
     return (
       <ButtonDropdown className="mydrop" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle caret color="secondary">
+        <DropdownToggle caret color="warning">
           halaman edit
         </DropdownToggle>
         <DropdownMenu>

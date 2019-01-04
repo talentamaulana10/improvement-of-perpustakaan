@@ -1,8 +1,38 @@
-import React,{Component} from 'react'
-export default class Author extends Component{
-    render(){
-        return(
-            <h1>ini Author</h1>
-        )
-    }
+import React,{Component} from 'react';
+import Axios from 'axios'
+import Cards from '../component/Card';
+export default class Example extends React.Component {
+  state={
+    books:[]
+  };
+
+  getBook=()=>{
+    Axios.get('https://api-demo.koding.sch.id/api/author/')
+    .then((res)=>{
+      console.log(res.data.data);
+      this.setState({
+        books:res.data.data
+      })
+
+      
+    })
+    .catch((err)=>{
+        alert("data gagal dimuat, mungkin anda sedang ofline")
+    });
+  };
+  
+  componentDidMount(){
+    this.getBook();
+  }
+
+  render() {
+    return (
+      <div>
+        {this.state.books.map((value,index)=>{
+          return<Cards title={value.name} author={value.id_author}/>
+        })}
+       
+      </div>
+    );
+  }
 }

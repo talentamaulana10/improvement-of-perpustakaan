@@ -18,16 +18,16 @@ import './navbar.css';
 export default class NavBar extends Component{
     render(){
         return(
-            <Navbar color="light" light expand="md" className="jan">
+            <Navbar color="green" expand="md" className="jan">
           
           <NavbarToggler onClick={this.toggle} />
           <Collapse  navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink className="mynav"  tag={Link} to="/book">Daftar Buku</NavLink>
+              <NavItem className="me">
+                <Link className="mynav" to="/book">Daftar Buku</Link>
               </NavItem>
-              <NavItem>
-                <NavLink className="mynav"  tag={Link} to="/author">Daftar Penulis</NavLink>
+              <NavItem className="me">
+                <Link className="mynav" to="/author">Daftar Penulis</Link>
               </NavItem>
               <NavItem>
                 <Drop/>

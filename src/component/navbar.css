@@ -1,9 +1,25 @@
 .mynav{
-    margin: 0px 140px 0px 140px;
+    margin: 0px 40px 0px 40px;
     font-weight: 600;
     font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 100px;
+    color: rgb(255, 255, 255);
+}
+.mynav:hover{
+    text-decoration: none;
+    color: rgb(255, 174, 0);
+    
 }
 .mydrop{
     margin-right: 200px;
     margin-left: 60px;
+}
+.me{
+    margin-top: 10px;
+}
+.jan{
+    background-color: rgb(41, 2, 43);
+    width: 1000px;
+    margin-left: 115px;
 }

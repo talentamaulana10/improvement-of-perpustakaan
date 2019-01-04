@@ -1,10 +1,7 @@
 import React,{Component} from 'react';
-import { Table } from 'reactstrap';
 import Axios from 'axios'
 
 import Cards from '../component/Card';
-
-import { from } from 'rxjs';
 export default class Example extends React.Component {
   state={
     books:[]

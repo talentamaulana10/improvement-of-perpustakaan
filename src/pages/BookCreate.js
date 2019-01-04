@@ -1,7 +1,5 @@
 import React,{Component} from 'react'
 import './book.css'
-import {Collapse,Navbar,NavLink,Button,NavbarToggler,NavbarBrand,Nav,NavItem,UncontrollexdDropdown,DropdownToggle,DropdownMenu,DropdownItem}from 'reactstrap';
-
 import {Link} from 'react-router-dom';
 import Axios from 'axios'
 export default class BookCreate extends Component{
@@ -73,7 +71,7 @@ export default class BookCreate extends Component{
                     <button className="mybutton" onClick={()=>{this.postBook()}}>Simpan</button>
                     <button className="mybuttont" onClick={()=>{this.batal()}} >Batal</button><br/>
                     
-                    <NavLink tag={Link} to="/"><h3 className="keluar">Home</h3></NavLink>
+                    <Link to="/"><h3 className="keluar">Home</h3></Link>
                     
             </div>
         )
