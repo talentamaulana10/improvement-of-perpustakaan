@@ -1,5 +1,6 @@
 import React from 'react';
 import './card.css';
+import {Link} from 'react-router-dom'
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap';
       const Cards=(props)=>{
@@ -10,8 +11,8 @@ import { Card, CardImg, CardText, CardBody,
             <CardBody className="mecard">
               <CardTitle>{props.title}</CardTitle>
               <h4>{props.author}</h4>
-              <Button>Hapus</Button>
-              <Button>Edit</Button>
+              <Button onClick={()=>props.delete(props.id)}>Hapus</Button>
+              <Link to={`/book/edit/${props.id}`}><Button>Edit</Button></Link>
             </CardBody>
           </Card>
         </div>

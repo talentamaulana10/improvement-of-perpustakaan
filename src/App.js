@@ -7,6 +7,7 @@ import Author from './pages/Author';
 import Table from './component/Table';
 import BookCreate from './pages/BookCreate';
 import AuthorCreate from './pages/AuthorCreate';
+import BookEdit from './pages/BookEdit';
 export default class App extends Component{
   componentDidMount(){
     document.title="react app"
@@ -21,6 +22,7 @@ export default class App extends Component{
                 <Route path="/author" exact  component={Author} />
                 <Route path="/table" exact  component={Table} />
                 <Route path="/book/create" component={BookCreate} />
+                <Route path="/book/edit/:id" component={BookEdit} />
                 <Route path="/author/create" component={AuthorCreate} />
 
         </Switch>
