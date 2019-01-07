@@ -1,5 +1,5 @@
 .mynav{
-    margin: 0px 40px 0px 40px;
+    margin: 0px 90px 0px 90px;
     font-weight: 600;
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
@@ -8,8 +8,11 @@
 }
 .mynav:hover{
     text-decoration: none;
-    color: rgb(255, 174, 0);
+    color: rgb(229, 255, 0);
     
+}
+.mynav::after{
+    border-bottom: 2px solid black;
 }
 .mydrop{
     margin-right: 200px;
@@ -19,7 +22,15 @@
     margin-top: 10px;
 }
 .jan{
-    background-color: rgb(41, 2, 43);
-    width: 1000px;
-    margin-left: 115px;
+    background-color: rgb(39, 8, 68);
+    width: 1245px;
+    margin-left: 0px;
+}
+.re{
+    color: rgb(255, 208, 0);
+    font-weight: 700;
+    margin-top: 5px;
+}
+.re:hover{
+    color: rgb(255, 208, 0);
 }

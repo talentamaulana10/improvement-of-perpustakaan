@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import Axios from 'axios'
+import Navbar from '../component/Navbar'
 import Cards from '../component/Card';
 export default class Example extends React.Component {
   state={
@@ -28,6 +29,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
+        <Navbar/>
         {this.state.books.map((value,index)=>{
           return<Cards title={value.name} author={value.id_author}/>
         })}

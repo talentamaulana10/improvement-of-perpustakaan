@@ -1,7 +1,11 @@
 import React,{Component} from 'react';
 import Axios from 'axios'
-
+import './buku.css'
+import Navbar from '../component/Navbar'
+import {Link} from 'react-router-dom'
+import Button from '../component/Button'
 import Cards from '../component/Card';
+import Table from '../component/Table';
 export default class Example extends React.Component {
   state={
     books:[]
@@ -28,10 +32,15 @@ export default class Example extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="sija">
+      <div className="navigator">
+        <Navbar/>
+        </div>
         {this.state.books.map((value,index)=>{
-          return<Cards title={value.judul} author={value.id_author}/>
+          return<div className="senju"><Cards title={value.judul} author={value.name}/></div>
         })}
+        <Button tag={Link} to="/book/create"/>
+        
        
       </div>
     );

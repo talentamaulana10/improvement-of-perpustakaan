@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import Drop from './Dropdown'
+import './smk.jpg'
 import {Link} from 'react-router-dom';
 import {
     Collapse,
@@ -19,7 +20,7 @@ export default class NavBar extends Component{
     render(){
         return(
             <Navbar color="green" expand="md" className="jan">
-          
+          <NavbarBrand href="/" className="re">Library Web</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse  navbar>
             <Nav className="ml-auto" navbar>

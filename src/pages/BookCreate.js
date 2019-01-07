@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import './book.css'
 import {Link} from 'react-router-dom';
+import Navbar from '../component/Navbar'
 import Axios from 'axios'
 export default class BookCreate extends Component{
     state={
@@ -56,11 +57,13 @@ export default class BookCreate extends Component{
     render(){
         const{author}=this.state
         return(
+            
             <div className="mebook">
-            <h1>Selamat datang di halaman tambah buku</h1>
+            <Navbar/>
+            <h1>"Selamat datang di halaman tambah buku"</h1>
             <hr/>
                 <input onChange={this.handleChanges} placeholder="Tulis Judul buku" value={this.state.judul}/><br/>
-                <p>pilih nama penulis :</p>
+                
                 <select onChange={this.selectHandleChanges}>
                     {author.map((value, index)=>{
                         return <option value={value.id}>{value.name}</option>
@@ -71,7 +74,6 @@ export default class BookCreate extends Component{
                     <button className="mybutton" onClick={()=>{this.postBook()}}>Simpan</button>
                     <button className="mybuttont" onClick={()=>{this.batal()}} >Batal</button><br/>
                     
-                    <Link to="/"><h3 className="keluar">Home</h3></Link>
                     
             </div>
         )
